@@ -10,5 +10,5 @@ int main(void)
 	{ putchar("%c" ,ch);
 		ch ++;
 	}
-	return(0)
+	return(0);
 }
