@@ -6,8 +6,8 @@
 
 int main(void)
 {char ch = 'a';
-	while (a <= 'z')
-	{ putchar("%c" ,ch);
+	while (ch <= 'z')
+	{ putchar(ch);
 		ch ++
 	}
 	return(0)
