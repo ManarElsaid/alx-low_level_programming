@@ -1,9 +1,10 @@
 #include "main.h"
- /**
-  * print_sign - check if n is positive or negative or zero
-  * @n: input for the function
-  * Return: 1 if +, 0 if 0 and -1 if - (Success)
-  */
+
+/**
+ * print_sign - checks the sign of n
+ * @n: takes integer input for function
+ * Return: returns 1 if +,0 if 0 and -1 if -
+ */
 int print_sign(int n)
 {
 	if (n > 0)
