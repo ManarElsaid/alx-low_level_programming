@@ -9,10 +9,11 @@ void print_line(int n)
 {
 	int count;
 
+	if (n <= 0)
+		_putchar('\n')
+
 	for (count = 0; count < n; count++)
 	{
-		if (n <= 0)
-			break;
 		_putchar('_');
 	}
 	_putchar("\n");
