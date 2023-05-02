@@ -2,22 +2,19 @@
 
 /**
  * print_rev - print string in reverse
- * @s: the string's pointer
+ * @s: the dtring's pointer
  */
 
 void print_rev(char *s)
 {
-	char rev[];
+	int i;
 
-	while (*s != '\0')
+	for (i = 0; *s != '\0'; *s++)
+		i++;
+
+	while (i--)
 	{
-		rev = *s;
-		*s++;
-	}
-	while (*rev != '\0')
-	{
-		_putchar(*rev);
-		*rev++;
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
