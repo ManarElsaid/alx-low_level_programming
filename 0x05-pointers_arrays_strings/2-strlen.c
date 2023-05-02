@@ -11,7 +11,7 @@ int _strlen(char *s)
 	int len;
 
 	str[] = *s;
-	len = sizeof(str[]) / sizeof(str[0]);
+	len = sizeof(str) / sizeof(str[0]);
 
 	return (len);
 }
