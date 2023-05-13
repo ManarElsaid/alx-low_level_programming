@@ -9,12 +9,12 @@
 
 int main(int argc, char *argv[])
 {
-	int mul;
+	int sum;
 
 	if (argc == 3)
 	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", mul);
+		sum = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", sum);
 	}
 
 	else
