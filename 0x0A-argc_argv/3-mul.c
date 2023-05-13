@@ -1,8 +1,9 @@
+#include <stdio.h>
 
 /**
  * main -  print the result of the multiplication
  * @argc: number of arguments
- * @argv: list
+i * @argv: list
  * Return: 1 at error and otherwise 0
  */
 
