@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - adds positive number
@@ -10,9 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int sum;
-
-	sum = 0;
+	int sum = 0;
 	char *c;
 
 	while (--argc)
