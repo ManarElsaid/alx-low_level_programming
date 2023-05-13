@@ -12,25 +12,20 @@ int main(int argc, char *argv[])
 {
 	int sum, i;
 
+	i = 0;
 	sum = 0;
+	char *c;
 
-	if (argc == 1)
+	while (--argc)
 	{
-		printf("0\n");
-	}
-	else
-		for (i = 0; i <= argc - 1; i++)
-		{
-			if (argv[i] >= 48 && argv[i] <= 97)
-			{
-				sum = sum + atoi(argv[i]);
-			}
-			else
+		for (c = argv[argc]; *c; c++)
+			if (*c < '0' || *c > '9')
 			{
 				printf("Error\n");
-				return (1);
+				return (0);
 			}
-		}
+		sum += atoi(argv[argc]);
+	}
 	printf("%d\n", sum);
 	return (0);
 }
