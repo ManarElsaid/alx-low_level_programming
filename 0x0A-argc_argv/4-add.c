@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
 
 	int i;
 
-	for (i = 1; i < argc; i++)
+	for (i = 1; i <= argc - 1; i++)
 	{
 		if (argv[i] < '0' || argv[i] > '9')
 		{
-			printf("Eirror\n");
+			printf("Error\n");
 			return (1);
 		}
 		else
