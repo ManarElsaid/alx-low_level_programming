@@ -8,5 +8,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f();
+	if (name && f)
+		f();
 }
