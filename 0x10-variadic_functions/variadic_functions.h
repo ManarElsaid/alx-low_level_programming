@@ -1,6 +1,7 @@
 #ifndef _VARIADIC_FUNCTIONS_H
 #define _VARIADIC_FUNCTIONS_H
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
  * struct token - struct token
@@ -10,8 +11,8 @@
 typedef struct token
 {
 	char *token;
-	void(*f)(char *, va_list);
-}token_t;
+	void (*f)(char *, va_list);
+} token_t;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
