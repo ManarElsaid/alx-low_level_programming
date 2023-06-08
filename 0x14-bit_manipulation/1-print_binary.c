@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int bit = size(n) * 8;
+	int bit = sizeof(n) * 8;
 	int p = 0;
 
 	while (bit)
