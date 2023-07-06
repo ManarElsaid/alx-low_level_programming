@@ -1,16 +1,23 @@
 #include "main.h"
 
 /**
- * get_endianness - checks the endianness
- * Return: 0 if big endian, 1 if little endian
+ * get_bit - returns the value of a bit at a given index
+ * @n: unsigned long int input.
+ * @index: index of the bit.
+ * Return: value of the bit.
  */
-int get_endianness(void)
+int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int x;
-	char *c;
+	unsigned int i;
 
-	x = 1;
-	c = (char *) &x;
+	if (n == 0 && index < 64)
+		return (0);
 
-	return ((int)*c);
+	for (i = 0; i <= 63; n >>= 1, i++)
+	{
+		if (index == i)
+			return (n & 1);
+	}
+
+	return (-1);
 }
