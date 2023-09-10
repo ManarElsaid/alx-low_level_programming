@@ -11,22 +11,22 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node = malloc(sizeof(hash_node_t));
+	unsigned long int index;
+	hash_node_t *current_node;
+
+	index = hash_djb2((unsigned char *)key);
+	current_node = ht->array[index];
 
 	if (node == NULL)
 		return (0);
 
 	if (strlen(key) == 0)
 		return (0);
-	unsigned long int index = hash_djb2(key);
 
-	node->key = malloc(strlen(key) + 1);
-	node->value = malloc(strlen(key) + 1);
+	node->key = strdup(key);
+	node->value = strdup(value);
 	node->value = NULL;
 
-	strcpy(node->key, key);
-	strcpy(node->value, value);
-
-	hash_node_t *current_node = ht->array[index];
 
 	if (current_node == NULL)
 	{
