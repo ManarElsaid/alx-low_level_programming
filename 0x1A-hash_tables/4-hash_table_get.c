@@ -2,7 +2,7 @@
 
 /**
  * hash_table_get -  a function that retrieves a value associated with a key.
- * @ht: the hash table 
+ * @ht: the hash table
  * @key: the key we want to look for
  * Return: the value
  */
