@@ -51,7 +51,7 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 		if (array[mid] < value)
 			l = mid + 1;
 	}
-return (-1);
+	return (-1);
 }
 
 /**
