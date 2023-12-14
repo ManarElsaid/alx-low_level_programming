@@ -63,7 +63,7 @@ int exponential_search(int *array, size_t size, int value)
 	}
 
 	l = step / 2;
-	if (step < (size - 1))
+	if (step < (size))
 		h = step;
 	else
 		h = size - 1;
