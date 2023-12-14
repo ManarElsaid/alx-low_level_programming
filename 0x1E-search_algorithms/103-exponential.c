@@ -35,7 +35,7 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 	}
 
 
-	while (h >= l)
+	while (h > l)
 	{
 		mid = (l + h) / 2;
 		printf("Searching in array: ");
