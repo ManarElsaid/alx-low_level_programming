@@ -34,7 +34,8 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 		return (-1);
 	}
 
-
+	if (array[0] == 0)
+		return (0);
 	while (h > l)
 	{
 		mid = (l + h) / 2;
