@@ -26,7 +26,7 @@ size_t min(size_t x, size_t y)
  * Return: the first index or -1
  */
 int binary_search_help(int *array, size_t l, size_t h, int value)
-{
+/*{
 	size_t mid, i;
 
 	if (array == NULL)
@@ -51,6 +51,28 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 		if (array[mid] < value)
 			l = mid + 1;
 	}
+	return (-1);
+}*/
+{
+	size_t mid, i;
+
+	if (!array)
+		return (-1);
+
+	while (l <= h)
+	{
+		mid = (l + h) / 2;
+		printf("Searching in array: ");
+		for (i = l; i <= h; i++)
+			printf("%i%s", array[i], i == h ? "\n" : ", ");
+		if (array[mid] < value)
+			l = mid + 1;
+		else if (array[mid] > value)
+			h = mid - 1;
+		else
+			return ((int)mid);
+	}
+
 	return (-1);
 }
 
