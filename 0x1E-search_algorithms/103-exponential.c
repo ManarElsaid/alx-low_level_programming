@@ -7,6 +7,7 @@ int binary_search_help(int *array, size_t l, size_t h, int value);
  * @array: a pointer to the first element of array
  * @l: the first element of the array
  * @h: the last element
+ * @value: the value we search for
  * Return: the first index or -1
  */
 int binary_search_help(int *array, size_t l, size_t h, int value)
@@ -14,32 +15,26 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 	size_t mid, i;
 
 	if (!array)
-    {
-        return (-1);
-    }
+	{
+		return (-1);
+	}
 
 
-    while (h >= l)
-    {
-        mid = l + (h - l) / 2;
-	printf("Searching in array: ");
-        for (i = l; i < h; i++)
-		printf("%d, ", array[i]);
-	printf("%d\n", array[h]);
-		
-        if (array[mid] == value)
-        {
-            return ((int)mid);
-        }
-        if (array[mid] > value)
-        {
-            h = mid - 1;
-        }
-        if (array[mid] < value)
-        {
-            l = mid + 1;
-        }
-    }
+	while (h >= l)
+	{
+		mid = l + (h - l) / 2;
+		printf("Searching in array: ");
+		for (i = l; i < h; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[h]);
+
+		if (array[mid] == value)
+			return ((int)mid);
+		if (array[mid] > value)
+			h = mid - 1;
+		if (array[mid] < value)
+			l = mid + 1;
+	}
 return (-1);
 }
 
