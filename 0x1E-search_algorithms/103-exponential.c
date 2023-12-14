@@ -29,7 +29,7 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 {
 	size_t mid, i;
 
-	if (!array)
+	if (array == NULL)
 	{
 		return (-1);
 	}
@@ -65,7 +65,7 @@ int exponential_search(int *array, size_t size, int value)
 {
 	size_t l, h, step;
 
-	if (!array || size == 0)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	step = 1;
