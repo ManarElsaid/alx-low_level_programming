@@ -1,6 +1,21 @@
 #include "search_algos.h"
 
 int binary_search_help(int *array, size_t l, size_t h, int value);
+size_t min(size_t x, size_t y);
+
+/**
+ * min - returns the min between 2 values
+ * @x: the first element
+ * @y: the second one
+ * Return: the minimum element
+ */
+size_t min(size_t x, size_t y)
+{
+	if (x <= y)
+		return (x);
+	else
+		return (y);
+}
 
 /**
  * binary_search_help - binary search with low and high
@@ -63,11 +78,7 @@ int exponential_search(int *array, size_t size, int value)
 	}
 
 	l = step / 2;
-	if (step < (size))
-		h = step;
-	else
-		h = size - 1;
-
+	h = min (step, size - 1);
 	printf("Value found between indexes [%lu] and [%lu]\n", l, h);
 	return (binary_search_help(array, l, h, value));
 
