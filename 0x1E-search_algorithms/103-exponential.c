@@ -11,7 +11,7 @@ int binary_search_help(int *array, size_t l, size_t h, int value);
  */
 size_t min(size_t x, size_t y)
 {
-	return (x <= y) ? x : y;
+	return ((x <= y) ? x : y);
 }
 
 /**
@@ -26,13 +26,9 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 {
 	size_t mid, i;
 
-	if (array == NULL)
-	{
+	if (!array)
 		return (-1);
-	}
 
-	if (array[0] == 0)
-		return (0);
 	while (h > l)
 	{
 		mid = (l + h) / 2;
