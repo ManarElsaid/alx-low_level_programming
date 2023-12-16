@@ -11,7 +11,10 @@ int binary_search_help(int *array, size_t l, size_t h, int value);
  */
 size_t min(size_t x, size_t y)
 {
-	return ((x <= y) ? x : y);
+	if (x <= y)
+		return (x);
+	else
+		return (y);
 }
 
 /**
@@ -29,7 +32,7 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 	if (!array)
 		return (-1);
 
-	while (l <= h)
+	while (h >= l)
 	{
 		mid = (l + h) / 2;
 		printf("Searching in array: ");
@@ -37,12 +40,12 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[h]);
 
+		if (array[mid] == value)
+			retutn (mid);
 		if (array[mid] > value)
 			h = mid - 1;
 		if (array[mid] < value)
 			l = mid + 1;
-		else
-			return ((int)mid);
 	}
 	return (-1);
 }
