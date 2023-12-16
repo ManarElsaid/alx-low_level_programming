@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
-int binary_search_help(int *array, size_t l, size_t h, int value);
 size_t min(size_t x, size_t y);
+int binary_search_help(int *array, size_t l, size_t h, int value);
 
 /**
  * min - returns the min between 2 values
