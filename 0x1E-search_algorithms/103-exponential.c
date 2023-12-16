@@ -33,7 +33,7 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 	{
 		mid = (l + h) / 2;
 		printf("Searching in array: ");
-		for (i = l; i <= h; i++)
+		for (i = l; i < h; i++)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[h]);
 
@@ -59,10 +59,10 @@ int exponential_search(int *array, size_t size, int value)
 {
 	size_t l, h, step;
 
-	step = 1;
 	if (array == NULL || size == 0)
 		return (-1);
 
+	step = 1;
 	while (step < size && array[step] <= value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", step, array[step]);
