@@ -11,10 +11,7 @@ int binary_search_help(int *array, size_t l, size_t h, int value);
  */
 size_t min(size_t x, size_t y)
 {
-	if (x <= y)
-		return (x);
-	else
-		return (y);
+	return (x <= y) ? x : y;
 }
 
 /**
