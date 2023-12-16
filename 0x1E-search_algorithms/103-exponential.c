@@ -37,12 +37,12 @@ int binary_search_help(int *array, size_t l, size_t h, int value)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[h]);
 
-		if (array[mid] == value)
-			return ((int)mid);
 		if (array[mid] > value)
 			h = mid - 1;
 		if (array[mid] < value)
 			l = mid + 1;
+		else
+			return (mid);
 	}
 	return (-1);
 }
